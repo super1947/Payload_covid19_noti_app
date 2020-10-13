@@ -27,7 +27,7 @@ import SimpleFooter from 'components/Footers/SimpleFooter.js';
 const Test_start = () => {
     return <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        <main className="profile-page">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 bg-gradient-dark">

@@ -47,14 +47,6 @@ import '../../assets/css/landing.css';
 import '../../assets/css/argon-design-system-react.css';
 
 const Main = () => {
-  // const nameFocused = useSelector(stat)
-  // state = {};
-  // componentDidMount() {
-  //   document.documentElement.scrollTop = 0;
-  //   document.scrollingElement.scrollTop = 0;
-  //   this.refs.main.scrollTop = 0;
-  // }
-  // render() {
     const nameFocused = useSelector(state => state.nameFocused)
     const emailFocused = useSelector(state => state.emailFocused)
     const [nameFocus , setnameFocus] = useState('') 
@@ -67,15 +59,6 @@ const Main = () => {
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
               <div className="shape shape-style-1 bg-gradient-dark">
-                {/* <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span /> */}
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
@@ -156,20 +139,20 @@ const Main = () => {
                             <i className="ni ni-check-bold" />
                           </div>
                           <h6 className="text-primary text-uppercase">
-                            엄선된 미니테스트를 통한 자가 진단
+                            엄선된 문제를 통한 자가 진단
                           </h6>
                           <p className="description mt-3">
-                            가나다라마바사아자차만ㅇ러ㅣㅁㄴ알너알낭린ㅁ닝ㄹㄴ리ㅁㄴㅇㄹㄴㅇㄻㄴㄻㄴㅇㄹㄴㅁㄻㄴㄻㄴㅇㄻㄴㄹ
+                            망고토익의 AI 알고리즘은 적은 문제로도 당신의 점수를 예측해줍니다. 지금 진단테스트를 통해 당신의 실력을 진단하고, 한 단계 나아갈 준비를 해보세요.
                           </p>
                           <div>
                             <Badge color="primary" pill className="mr-1">
-                              #90%정확도
+                              #80%정확도
                             </Badge>
                             <Badge color="primary" pill className="mr-1">
-                              #뭘넣지
+                              #AI가추천
                             </Badge>
                             <Badge color="primary" pill className="mr-1">
-                              #아무거나
+                              #엄선된문제
                             </Badge>
                           </div>
                           <Button
@@ -187,25 +170,23 @@ const Main = () => {
                       <Card className="card-lift--hover shadow border-0">
                         <CardBody className="py-5">
                           <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
-                            <i className="ni ni-istanbul" />
+                            <i className="fa fa-clipboard"/>
                           </div>
                           <h6 className="text-success text-uppercase">
-                            동영상 강좌로 한 단계 레벨업
+                            자신만의 오답노트를 관리하고 AI가 추천해주는 단어를 공부해 보세요.
                           </h6>
                           <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
+                            망고토익의 
                           </p>
                           <div>
                             <Badge color="success" pill className="mr-1">
-                              business
+                              #나만의오답노트
                             </Badge>
                             <Badge color="success" pill className="mr-1">
-                              vision
+                              #AI가추천하는단어집
                             </Badge>
                             <Badge color="success" pill className="mr-1">
-                              success
+                              #단어,로맨틱,성공적
                             </Badge>
                           </div>
                           <Button
@@ -214,7 +195,7 @@ const Main = () => {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            강좌 들으러 가기
+                            지금 공부하러 가기
                           </Button>
                         </CardBody>
                       </Card>
@@ -226,12 +207,10 @@ const Main = () => {
                             <i className="ni ni-planet" />
                           </div>
                           <h6 className="text-warning text-uppercase">
-                            전문 강사와 1:1멘토링
+                            망고토익 리뷰
                           </h6>
                           <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
+                            ㅇㅇㄴㄴ
                           </p>
                           <div>
                             <Badge color="warning" pill className="mr-1">

@@ -152,8 +152,7 @@ const Login = () => {
                     <Col className="text-right" xs="6">
                       <a
                         className="text-white"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        href="/register-page"
                       >
                         <small>회원가입</small>
                       </a>
