@@ -24,38 +24,25 @@ import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
 import Index from "views/Index.js";
-import Landing from "views/examples/Landing.js";
+import Main from "views/examples/Main.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Test_start from "views/examples/Test_start.js";
+import { Provider } from 'react-redux'
+import store from './store'
 ReactDOM.render(
+  <Provider store = {store}>
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
-      <Route
-        path="/landing-page"
-        exact
-        render={props => <Landing {...props} />}
-      />
-      <Route path="/login-page" exact render={props => <Login {...props} />} />
-      <Route
-        path="/profile-page"
-        exact
-        render={props => <Profile {...props} />}
-      />
-      <Route
-        path="/test_start-page"
-        exact
-        render={props => <Test_start {...props} />}
-      />
-      <Route
-        path="/register-page"
-        exact
-        render={props => <Register {...props} />}
-      />
+      <Route exact path="/" component ={Main} />
+      <Route path="/login-page" component = {Login}/>
+      <Route path="/profile-page" component={Profile}/>
+      <Route path="/test_start-page" component={Test_start}/>
+      <Route path="/register-page" component={Register}/>
       <Redirect to="/" />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );

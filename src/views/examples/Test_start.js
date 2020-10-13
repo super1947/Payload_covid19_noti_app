@@ -63,31 +63,74 @@ class Test_start extends React.Component {
                   <div className="text-center mt-5">
                     <h3>
                       1번 문제{' '}
-
                     </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
-                      Solution Manager - Creative Tim Officer
-                    </div>
-                    <div>
-                      <i className="ni education_hat mr-2" />
-                      University of Computer Science
+                      "The assets of Marble Faun Publishing Company ___ last quarter when one of their main local distributors went out of business."
                     </div>
                   </div>
                   <div className="mt-5 py-5 text-center">
                     <Row className="justify-content-center">
                       <Col lg="9">
-                        <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
-                        </p>
+                        <div className="mb-3">
+              <small className="text-uppercase font-weight-bold">정답</small>
+            </div>
+            <div className="row-grid">
+            <Row className="justify-content-around">
+            <div className="custom-control custom-radio mb-3">
+              <input
+                className="custom-control-input"
+                id="customRadio1"
+                name="custom-radio-1"
+                type="radio"
+              />
+              <label className="custom-control-label" htmlFor="customRadio1">
+                <span>suffer</span>
+              </label>
+            </div>
+            <div className="custom-control custom-radio mb-3">
+              <input
+                className="custom-control-input"
+                defaultChecked
+                id="customRadio2"
+                name="custom-radio-1"
+                type="radio"
+              />
+              <label className="custom-control-label" htmlFor="customRadio2">
+                <span>suffers</span>
+              </label>
+            </div>
+            </Row>
+            <Row className="justify-content-around">
+            <div className="custom-control custom-radio mb-3">
+              <input
+                className="custom-control-input"
+                defaultChecked
+                id="customRadio3"
+                name="custom-radio-1"
+                type="radio"
+              />
+              <label className="custom-control-label" htmlFor="customRadio3">
+                <span>suffering</span>
+              </label>
+            </div>
+            <div className="custom-control custom-radio mb-3">
+              <input
+                className="custom-control-input"
+                defaultChecked
+                id="customRadio4"
+                name="custom-radio-1"
+                type="radio"
+              />
+              <label className="custom-control-label" htmlFor="customRadio4">
+                <span>suffered</span>
+              </label>
+            </div>
+            </Row>
+            </div>
                         {/* <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           Show more
                         </a> */}

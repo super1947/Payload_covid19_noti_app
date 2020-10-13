@@ -40,11 +40,11 @@ import {
 } from 'reactstrap';
 
 const DemoNavbar = () => {
-  const componentDidMount = () => {
-    let headroom = new Headroom(document.getElementById('navbar-main'));
-    // initialise
-    headroom.init();
-  };
+  // const componentDidMount = () => {
+  //   let headroom = new Headroom(document.getElementById('navbar-main'));
+  //   // initialise
+  //   headroom.init();
+  // };
   const [collapseClasses, setCollapseClasses] = useState('');
   const [collapseOpen, setCollapseOpen] = useState(false);
 
@@ -65,7 +65,7 @@ const DemoNavbar = () => {
           id="navbar-main"
         >
           <Container>
-            <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
+            <NavbarBrand className="mr-lg-5" to="/Main" tag={Link}>
               <img alt="..." src={require('assets/img/brand/mango_logo.png')} />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
@@ -201,6 +201,46 @@ const DemoNavbar = () => {
                     </DropdownItem> */}
                   </DropdownMenu>
                 </UncontrolledDropdown>
+                <UncontrolledDropdown nav>
+                  <DropdownToggle nav>
+                    <i className="ni ni-collection d-lg-none mr-1" />
+                    <span className="nav-link-inner--text">문제생성</span>
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem to="/landing-page" tag={Link}>
+                      사전정보 입력
+                    </DropdownItem>
+                    <DropdownItem to="/test_start-page" tag={Link}>
+                      테스트 시작
+                    </DropdownItem>
+                    <DropdownItem to="/login-page" tag={Link}>
+                      예측점수 확인
+                    </DropdownItem>
+                    {/* <DropdownItem to="/register-page" tag={Link}>
+                      Register
+                    </DropdownItem> */}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+                <UncontrolledDropdown nav>
+                  <DropdownToggle nav>
+                    <i className="ni ni-collection d-lg-none mr-1" />
+                    <span className="nav-link-inner--text">게시판</span>
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem to="/landing-page" tag={Link}>
+                      사전정보 입력
+                    </DropdownItem>
+                    <DropdownItem to="/test_start-page" tag={Link}>
+                      테스트 시작
+                    </DropdownItem>
+                    <DropdownItem to="/login-page" tag={Link}>
+                      예측점수 확인
+                    </DropdownItem>
+                    {/* <DropdownItem to="/register-page" tag={Link}>
+                      Register
+                    </DropdownItem> */}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </Nav>
               <Nav className="align-items-lg-center ml-lg-auto" navbar>
                 <NavItem>
@@ -271,8 +311,7 @@ const DemoNavbar = () => {
                   <Button
                     className="btn-neutral btn-icon"
                     color="default"
-                    href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-navbar"
-                    target="_blank"
+                    href="/login-page"
                   >
                     <span className="btn-inner--icon">
                       <i className="fa fa-user-plus" />

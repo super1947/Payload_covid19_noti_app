@@ -38,17 +38,10 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-class Login extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
-    return (
-      <>
+const Login = () => {
+    return <>
         <DemoNavbar />
-        <main ref="main">
+        <main>
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-dark">
             </div>
@@ -139,7 +132,7 @@ class Login extends React.Component {
                             color="primary"
                             type="button"
                           >
-                            Sign in
+                            로그인
                           </Button>
                         </div>
                       </Form>
@@ -148,20 +141,21 @@ class Login extends React.Component {
                   <Row className="mt-3">
                     <Col xs="6">
                       <a
-                        className="text-light"
+                        // style={{fontSize: "1rem"}}
+                        className="text-white"
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        <small>Forgot password?</small>
+                        <small>비밀번호를 잊으셨나요?</small>
                       </a>
                     </Col>
                     <Col className="text-right" xs="6">
                       <a
-                        className="text-light"
+                        className="text-white"
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
-                        <small>Create new account</small>
+                        <small>회원가입</small>
                       </a>
                     </Col>
                   </Row>
@@ -172,8 +166,5 @@ class Login extends React.Component {
         </main>
         <SimpleFooter />
       </>
-    );
-  }
 }
-
 export default Login;

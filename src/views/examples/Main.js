@@ -15,9 +15,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from 'react';
+import React, { useState } from 'react';
 // nodejs library that concatenates classes
 import classnames from 'classnames';
+import { useSelector, useDispatch } from 'react-redux'
 
 // reactstrap components
 import {
@@ -45,18 +46,23 @@ import Download from '../IndexSections/Download.js';
 import '../../assets/css/landing.css';
 import '../../assets/css/argon-design-system-react.css';
 
-class Landing extends React.Component {
-  state = {};
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
-    return (
-      <>
+const Main = () => {
+  // const nameFocused = useSelector(stat)
+  // state = {};
+  // componentDidMount() {
+  //   document.documentElement.scrollTop = 0;
+  //   document.scrollingElement.scrollTop = 0;
+  //   this.refs.main.scrollTop = 0;
+  // }
+  // render() {
+    const nameFocused = useSelector(state => state.nameFocused)
+    const emailFocused = useSelector(state => state.emailFocused)
+    const [nameFocus , setnameFocus] = useState('') 
+    const [emailFocus , setemailFocus] = useState('') 
+    const dispatch = useDispatch()
+    return<>
         <DemoNavbar />
-        <main ref="main">
+        <main >
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
@@ -105,7 +111,7 @@ class Landing extends React.Component {
                         <Button
                           className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
                           color="default"
-                          href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
+                          href="./register-page"
                         >
                           <span className="btn-inner--icon mr-1">
                             <i className="fa fa-play" />
@@ -841,7 +847,7 @@ class Landing extends React.Component {
                       </p>
                       <FormGroup
                         className={classnames('mt-5', {
-                          focused: this.state.nameFocused,
+                          focused: nameFocused,
                         })}
                       >
                         <InputGroup className="input-group-alternative">
@@ -854,17 +860,17 @@ class Landing extends React.Component {
                             placeholder="Your name"
                             type="text"
                             onFocus={(e) =>
-                              this.setState({ nameFocused: true })
+                              setnameFocus(true)
                             }
                             onBlur={(e) =>
-                              this.setState({ nameFocused: false })
+                              setnameFocus(false)
                             }
                           />
                         </InputGroup>
                       </FormGroup>
                       <FormGroup
                         className={classnames({
-                          focused: this.state.emailFocused,
+                          focused: emailFocused,
                         })}
                       >
                         <InputGroup className="input-group-alternative">
@@ -877,10 +883,10 @@ class Landing extends React.Component {
                             placeholder="Email address"
                             type="email"
                             onFocus={(e) =>
-                              this.setState({ emailFocused: true })
+                              setemailFocus(true)
                             }
                             onBlur={(e) =>
-                              this.setState({ emailFocused: false })
+                              setemailFocus( false)
                             }
                           />
                         </InputGroup>
@@ -916,8 +922,6 @@ class Landing extends React.Component {
         </main>
         <CardsFooter />
       </>
-    );
-  }
 }
 
-export default Landing;
+export default Main;
